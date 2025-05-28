@@ -12,12 +12,12 @@ function TodoForm({ onAdd }) {
   };
 
   return (
-    <>
-      <h1 className="mb-4">🌸 Lista de Tareas 🌸</h1>
-      <form className="input-group mb-3" onSubmit={handleSubmit}>
+    <div className="formulario">
+      <h1 className="titulo">Lista de Tareas</h1>
+      <form className="formulario-tarea" onSubmit={handleSubmit}>
         <input
           type="text"
-          className="form-control"
+          className="entrada-tarea"
           placeholder="Introducir tarea"
           minLength="3"
           maxLength="100"
@@ -25,9 +25,9 @@ function TodoForm({ onAdd }) {
           onChange={(e) => setText(e.target.value)}
           required
         />
-        <button className="btn btn-custom" type="submit">Agregar</button>
+        <button className="boton-agregar" type="submit">Agregar</button>
       </form>
-    </>
+    </div>
   );
 }
 

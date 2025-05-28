@@ -65,7 +65,7 @@ function App() {
     if (completedTasks.length === 0) {
       alert("No hay tareas completadas aún.");
       return;
-    }
+    } 
   
     const fastest = completedTasks.reduce((a, b) => {
       const durationA = a.completedAt - a.id;

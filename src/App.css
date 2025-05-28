@@ -1,0 +1,180 @@
+/* === Estilo general === */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5faff;
+  color: #003366;
+  margin: 0;
+  padding: 0;
+}
+
+.todo-app .container {
+  background-color: white;
+  border: 2px solid #1e90ff;
+  border-radius: 15px;
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0, 51, 102, 0.1);
+}
+
+/* === TodoForm === */
+.formulario {
+  margin-bottom: 2rem;
+}
+
+.titulo {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.formulario-tarea {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.entrada-tarea {
+  flex-grow: 1;
+  padding: 0.5rem;
+  border: 1px solid #1e90ff;
+  border-radius: 5px;
+}
+
+.entrada-tarea:focus {
+  outline: none;
+  border-color: #005bbb;
+  box-shadow: 0 0 5px rgba(30, 144, 255, 0.4);
+}
+
+.boton-agregar {
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.boton-agregar:hover {
+  background-color: #005bbb;
+}
+
+/* === FilterButtons === */
+.filtros-contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.filtro-select {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.etiqueta-filtro {
+  font-weight: bold;
+}
+
+.selector-filtro {
+  padding: 0.3rem 0.5rem;
+  border: 1px solid #1e90ff;
+  border-radius: 5px;
+}
+
+.filtro-botones {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.boton-filtro {
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.boton-filtro:hover {
+  background-color: #005bbb;
+}
+
+/* === TodoItem === */
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-left: 5px solid #1e90ff;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  background-color: white;
+}
+
+.todo-item.completada {
+  background-color: #e0f7ff;
+  color: #777;
+}
+
+.contenido {
+  flex-grow: 1;
+}
+
+.texto {
+  font-size: 1rem;
+}
+
+.fechas {
+  font-size: 0.75rem;
+  color: #555;
+}
+
+.botones {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn-completar,
+.btn-eliminar {
+  padding: 0.3rem 0.6rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-completar {
+  background-color: #4caf50;
+  color: white;
+}
+
+.btn-completar:hover {
+  background-color: #3e8e41;
+}
+
+.btn-eliminar {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn-eliminar:hover {
+  background-color: #c0392b;
+}
+
+/* === Responsive === */
+@media (max-width: 576px) {
+  .formulario-tarea,
+  .filtros-contenedor {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filtro-botones {
+    justify-content: flex-start;
+  }
+}
